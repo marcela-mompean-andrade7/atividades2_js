@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratos - Marcela</title>
+</head>
+<body>
+    <h1>Faça seu pedido!</h1>
+    <button onclick="pratos()">Seu Prato</button>
+    <div id="resultado"></div>
+
+    <script>
+        function pratos(){
+            let pratos = prompt("Digite o seu prato do dia:");
+
+        switch (pratos){
+            case "Pizza":
+            document.write("Molho de tomate, Presunto, Queijo, Tomate");
+            break;
+            case "Hamburguer":
+            document.write("Pão, Presunto, Queijo, Tomate, Salada, Ketchup, Maionesse, Hamburger");
+            break;
+            case "Sushi":
+            document.write("Sashemi, Salmão");
+            break;
+            case "Salada":
+            document.write("Salada, pepino, tomate");
+            break;
+             default:
+                    document.write("Prato não registrado")
+                break;
+        }
+        document.getElementById("resultado").innerHTML = `
+            ${nome}, este é o seu prato ${tipoPrato}.
+            `;
+    }
+    </script>
+</body>
+</html>
